@@ -73,7 +73,7 @@ header.navbar,
 /* Primärfarbe: Philharmonie-Blau */
 .btn-primary {
   color: #fff !important;
-  background-color: #10069f !important;
+  background-color: #ff0000 !important;
   border-color: #10069f !important;
 }
 .btn-primary:hover,
