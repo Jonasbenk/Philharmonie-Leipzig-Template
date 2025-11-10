@@ -1,159 +1,26 @@
-/* ============================================================
-   Philharmonie Leipzig – Custom Design (ähnlich Dresdner Philharmonie)
-   ============================================================ */
-
-/* -----------------------------
-   Basis & Typografie
---------------------------------*/
-body {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: "Apercu", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-  color: #000;
-  margin-top: 0;
-  margin-bottom: 0.75em;
-}
-
-h1 { font-size: 2.25rem; }   /* ~36 px */
-h2 { font-size: 1.75rem; }   /* ~28 px */
-h3 { font-size: 1.375rem; }  /* ~22 px */
-
-a {
-  color: #10069f;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-a:hover, a:focus {
-  color: #1508d0;
-  text-decoration: underline;
-}
-
-/* -----------------------------
-   Header & Navigation
---------------------------------*/
+/* Entfernt sämtliche Linien, Ränder und Schatten im Header-Bereich */
 header.navbar,
 .navbar,
-.navbar-default {
+.navbar-default,
+.navbar-header,
+.navbar-collapse,
+.navbar-nav,
+.navbar-brand {
   border: none !important;
   box-shadow: none !important;
-  background-color: #fff !important;
+  background-image: none !important;
 }
 
-.navbar-nav > li > a {
-  color: #000 !important;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.navbar-nav > li > a:hover,
-.navbar-nav > li.active > a {
-  color: #10069f !important;
-  background: none !important;
+header.navbar,
+.navbar-default {
+  border-bottom: none !important;
 }
 
-/* -----------------------------
-   Buttons
---------------------------------*/
-.btn {
-  border-radius: 0;
-  padding: 10px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: all 0.25s ease;
-}
-
-/* Primärfarbe: Philharmonie-Blau */
-.btn-primary {
-  color: #fff !important;
-  background-color: #ff0000 !important;
-  border-color: #10069f !important;
-}
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #1508d0 !important;
-  border-color: #1508d0 !important;
-}
-.btn-primary:active,
-.btn-primary.active {
-  background-color: #08034b !important;
-  border-color: #08034b !important;
-}
-
-/* Sekundär (weißer Button mit blauer Schrift) */
-.btn-default {
-  color: #10069f !important;
-  background-color: #fff !important;
-  border-color: #10069f !important;
-}
-.btn-default:hover,
-.btn-default:focus {
-  color: #fff !important;
-  background-color: #10069f !important;
-}
-
-/* -----------------------------
-   Container & Layout
---------------------------------*/
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.well, .panel {
-  background-color: #f4f4f4;
-  border: none;
-  box-shadow: none;
-  color: #000;
-}
-
-/* -----------------------------
-   Event-Liste / Header
---------------------------------*/
-.page-header.text-center h1 {
-  color: #000;
-  font-size: 2.25rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* -----------------------------
-   Footer
---------------------------------*/
-.footer {
-  background: #fff;
-  border-top: 1px solid #e5e5e5;
-  color: #000;
-  font-size: 0.875rem;
-  padding: 30px 0;
-}
-.footer a {
-  color: #10069f;
-}
-.footer a:hover {
-  color: #1508d0;
-}
-
-/* -----------------------------
-   Responsiv
---------------------------------*/
-@media (max-width: 767px) {
-  .navbar-nav > li > a {
-    font-size: 14px;
-  }
-  .btn {
-    font-size: 14px;
-    padding: 8px 18px;
-  }
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.5rem; }
+.navbar::before,
+.navbar::after,
+.navbar-default::before,
+.navbar-default::after {
+  display: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
