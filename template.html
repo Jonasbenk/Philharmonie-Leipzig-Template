@@ -3,13 +3,37 @@
 <head>
   <!-- [head begin] -->
   <style>
-    /* Test: färbt den "Veranstaltungen"-Titel rot */
+    /* Test im HEAD: färbt die H1 "Veranstaltungen" rot */
     .page-eventlist .page-header.text-center h1 { color: red !important; }
+    /* Nur für Direktaufruf, damit die Seite nicht „weiß“ wirkt */
+    body { font-family: system-ui, Arial, sans-serif; }
   </style>
   <!-- [head end] -->
 </head>
 <body>
-  <!-- [top begin] --><!-- [top end] -->
+  <!-- [top begin] -->
+  <div id="tpl-test-banner"
+       style="position:fixed;top:0;left:0;right:0;z-index:999999;
+              background:#ff0040;color:#fff;padding:8px 12px;
+              text-align:center;font:14px/1.3 system-ui;">
+    TEMPLATE GELADEN (Top-Bereich)
+  </div>
+  <script>
+    // Banner nach 2 Sekunden entfernen (im Shop stört er so nicht)
+    setTimeout(function(){
+      var b=document.getElementById('tpl-test-banner');
+      if(b && b.parentNode) b.parentNode.removeChild(b);
+    }, 2000);
+  </script>
+  <!-- [top end] -->
+
   <!-- [bottom begin] --><!-- [bottom end] -->
+
+  <!-- Nur für den Direktaufruf sichtbar (Inhouse ignoriert das einfach) -->
+  <div style="margin:80px auto;max-width:800px;padding:16px;">
+    <h1>Template OK</h1>
+    <p>Diese Datei enthält Parser-Tags für Eventim Inhouse.<br>
+       Im Shop färbt sie „Veranstaltungen“ rot und zeigt kurz den roten Test-Banner.</p>
+  </div>
 </body>
 </html>
