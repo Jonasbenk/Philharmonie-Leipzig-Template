@@ -1,26 +1,67 @@
-/* Entfernt sämtliche Linien, Ränder und Schatten im Header-Bereich */
+/* ============================================================
+   Header Cleanup – entfernt ALLE sichtbaren Linien, Borders & Schatten
+   ============================================================ */
+
+/* Haupt-Header, Navbar & Container */
 header.navbar,
 .navbar,
 .navbar-default,
 .navbar-header,
 .navbar-collapse,
 .navbar-nav,
-.navbar-brand {
+.navbar-brand,
+.navbar-inner,
+.navbar-toggle {
   border: none !important;
   box-shadow: none !important;
   background-image: none !important;
+  outline: none !important;
 }
 
+/* Entfernt auch eventuelle untere Linien */
 header.navbar,
-.navbar-default {
+.navbar,
+.navbar-default,
+.navbar-inner {
   border-bottom: none !important;
 }
 
+/* Entfernt pseudo-element borders */
 .navbar::before,
 .navbar::after,
 .navbar-default::before,
-.navbar-default::after {
+.navbar-default::after,
+.navbar-inner::before,
+.navbar-inner::after {
   display: none !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+/* Menü-Links (entfernt evtl. 1px border zwischen <li>-Items) */
+.navbar-nav > li,
+.navbar-nav > li > a {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Dropdowns & Untermenüs */
+.navbar .dropdown-menu,
+.navbar .dropdown-menu > li > a {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Button / Burger-Menü (mobile Ansicht) */
+.navbar-toggle,
+.navbar-toggle:focus,
+.navbar-toggle:hover {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Optionale Hintergrundfarbe (falls darunter etwas durchscheint) */
+header.navbar {
+  background-color: #fff !important;
 }
