@@ -1,0 +1,32 @@
+/* Philharmonie Leipzig Custom Buttons */
+.btn-primary {
+  color: #fff !important;
+  background-color: #0d6efd !important; /* Bootstrap-like Blau */
+  border-color: #0a58ca !important;
+  font-family: Apercu, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.active,
+.btn-primary:active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff !important;
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  background-color: #0d6efd !important;
+  border-color: #0a58ca !important;
+  opacity: 0.65;
+}
+
+.btn-primary .badge {
+  color: #0d6efd !important;
+  background-color: #fff !important;
+}
