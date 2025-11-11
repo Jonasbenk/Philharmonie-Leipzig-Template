@@ -171,7 +171,7 @@ small {
 --------------------------------*/
 /* Globaler Abstand, damit der Content nicht vom fixen Header überlagert wird */
 body {
-  padding-top: 140px !important; /* Wert ggf. anpassen */
+  padding-top: 80px !important; /* Wert ggf. anpassen */
 }
 .container.webshop,
 #goMainContent {
@@ -181,13 +181,13 @@ body {
 /* Falls body-Padding ignoriert wird (z. B. durch Inhouse-Template) */
 header.navbar.navbar-fixed-top + .container,
 header.navbar.navbar-fixed-top + .container.webshop {
-  margin-top: 140px !important;
+  margin-top: 80px !important;
 }
 /* Mobil etwas weniger Abstand */
 @media (max-width: 767px) {
-  body { padding-top: 110px !important; }
+  body { padding-top: 80px !important; }
   header.navbar.navbar-fixed-top + .container,
   header.navbar.navbar-fixed-top + .container.webshop {
-    margin-top: 110px !important;
+    margin-top: 80px !important;
   }
 }
