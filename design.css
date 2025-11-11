@@ -1,5 +1,5 @@
 /* ============================================================
-   Philharmonie Leipzig – Custom Design
+   Philharmonie Leipzig – Custom Design (aktuell kompletter Stand)
    ============================================================ */
 
 /* -----------------------------
@@ -97,7 +97,7 @@ small {
 }
 
 /* -----------------------------
-   BUTTONS
+   BUTTONS – Allgemein
 --------------------------------*/
 .btn,
 .btn-default,
@@ -111,7 +111,7 @@ small {
   font-size: 18px !important;
   letter-spacing: 0.5px;
   padding: 10px 24px;
-  border-radius: 0 !important;
+  border-radius: 300px !important;
   transition: all 0.25s ease;
 }
 
@@ -124,4 +124,25 @@ small {
   color: #000 !important;
   border-color: #000 !important;
   text-decoration: none !important;
+}
+
+/* -----------------------------
+   BUTTONS – Ausnahmen / Filterleiste
+--------------------------------*/
+/* Buttons wie "Keine Filter gesetzt" oder "Filter löschen"
+   sollen NUR Rahmen haben, kein schwarzes Fill */
+.btn-default,
+.btn-filter-reset,
+.btn-filter-empty {
+  background-color: transparent !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+
+/* Hover-Effekt für diese hellen Buttons */
+.btn-default:hover,
+.btn-filter-reset:hover,
+.btn-filter-empty:hover {
+  background-color: #000 !important;
+  color: #fff !important;
 }
