@@ -1,5 +1,5 @@
 /* ============================================================
-   Philharmonie Leipzig – Custom Design (Gesamtstand mit Spacing-Fix & Filter-Buttons)
+   Philharmonie Leipzig – Custom Design (Gesamtstand)
    ============================================================ */
 
 /* -----------------------------
@@ -75,18 +75,10 @@ header.navbar,
   text-indent: 0 !important;
   overflow: visible !important;
 }
-/* Navbar insgesamt höher, damit Logo Platz hat */
 .navbar {
   min-height: 110px !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-}
-
-/* -----------------------------
-   SPACING unterhalb Header
---------------------------------*/
-body.page-eventlist .page-header {
-  margin-top: 160px !important; /* sorgt für Abstand unter der größeren Navbar */
 }
 
 /* -----------------------------
@@ -172,4 +164,30 @@ small {
 #dropup-language.btn:focus {
   background-color: #000 !important;
   color: #fff !important;
+}
+
+/* -----------------------------
+   SPACING unterhalb Header
+--------------------------------*/
+/* Globaler Abstand, damit der Content nicht vom fixen Header überlagert wird */
+body {
+  padding-top: 140px !important; /* Wert ggf. anpassen */
+}
+.container.webshop,
+#goMainContent {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+/* Falls body-Padding ignoriert wird (z. B. durch Inhouse-Template) */
+header.navbar.navbar-fixed-top + .container,
+header.navbar.navbar-fixed-top + .container.webshop {
+  margin-top: 140px !important;
+}
+/* Mobil etwas weniger Abstand */
+@media (max-width: 767px) {
+  body { padding-top: 110px !important; }
+  header.navbar.navbar-fixed-top + .container,
+  header.navbar.navbar-fixed-top + .container.webshop {
+    margin-top: 110px !important;
+  }
 }
