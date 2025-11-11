@@ -184,6 +184,16 @@ small {
 }
 
 /* -----------------------------
+   WELL & WELL-LIGHT
+--------------------------------*/
+.well {
+  padding: 0 !important;
+}
+.well-light {
+  border: 0 !important;
+}
+
+/* -----------------------------
    SPACING unterhalb Header
 --------------------------------*/
 body {
