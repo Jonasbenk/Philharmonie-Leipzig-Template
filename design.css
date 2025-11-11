@@ -1,6 +1,18 @@
 /* ============================================================
-   Philharmonie Leipzig – Custom Design (Gesamtstand)
+   Philharmonie Leipzig – Custom Design (Gesamtstand mit Adobe Font)
    ============================================================ */
+
+/* -----------------------------
+   Adobe Fonts (Typekit)
+--------------------------------*/
+/* Schrift via Typekit einbinden */
+@import url("https://use.typekit.net/ddg0djh.css");
+
+/* Standard-Textschrift global */
+body, p, span, a, small, .navbar-nav > li > a, .btn, .label {
+  font-family: "adobe-clean", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400 !important;
+}
 
 /* -----------------------------
    Custom Font: Tiempos Headline Regular
