@@ -1,5 +1,5 @@
 /* ============================================================
-   Philharmonie Leipzig – Custom Design (Gesamtstand)
+   Philharmonie Leipzig – Custom Design (Gesamtstand mit Spacing-Fix & Filter-Buttons)
    ============================================================ */
 
 /* -----------------------------
@@ -54,14 +54,12 @@ header.navbar,
 /* -----------------------------
    LOGO & HEADER-HÖHE
 --------------------------------*/
-/* Bootstrap setzt auf großen Screens margin-left – entfernen */
 @media (min-width: 1000px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: 0 !important;
   }
 }
-/* Brand-Box: Abstände weg, größer, Hintergrund-Logo voll nutzen */
 .navbar-brand {
   padding: 0 !important;
   margin: 0 !important;
@@ -69,12 +67,12 @@ header.navbar,
   display: block !important;
   width: auto !important;
   max-width: none !important;
-  height: 90px !important;          /* größer */
+  height: 90px !important;
   line-height: 90px !important;
   background-repeat: no-repeat !important;
   background-position: left center !important;
-  background-size: auto 80% !important; /* skaliert Logo in der Höhe */
-  text-indent: 0 !important;            /* falls per Bootstrap 9999px */
+  background-size: auto 80% !important;
+  text-indent: 0 !important;
   overflow: visible !important;
 }
 /* Navbar insgesamt höher, damit Logo Platz hat */
@@ -82,6 +80,13 @@ header.navbar,
   min-height: 110px !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+}
+
+/* -----------------------------
+   SPACING unterhalb Header
+--------------------------------*/
+body.page-eventlist .page-header {
+  margin-top: 160px !important; /* sorgt für Abstand unter der größeren Navbar */
 }
 
 /* -----------------------------
@@ -124,8 +129,7 @@ small {
    BUTTONS – Grundstil (schwarz)
 --------------------------------*/
 .btn,
-.btn-primary,
-.btn-default {
+.btn-primary {
   background-color: #000 !important;
   border-color: #000 !important;
   border-width: 3px !important;
@@ -135,7 +139,7 @@ small {
   font-size: 18px !important;
   letter-spacing: 0.5px;
   padding: 10px 24px;
-  border-radius: 300px !important;    /* Pill-Form */
+  border-radius: 300px !important;
   transition: all 0.25s ease;
 }
 .btn:hover,
@@ -150,24 +154,22 @@ small {
 
 /* -----------------------------
    BUTTONS – Ausnahmen (nur Rahmen, kein Fill)
-   - "Keine Filter gesetzt", "Filter löschen" (typisch .btn-default / eigene Klassen)
-   - Sprachumschalter (#dropup-language)
+   Filter + Sprache + btn-defaults
 --------------------------------*/
+.btn-default,
 .btn-filter-reset,
 .btn-filter-empty,
 #dropup-language.btn,
-#dropup-language.btn.dropdown-toggle,
-.navbar .btn-default {                 /* .btn-default hier explizit erneut,
-                                          um sie als 'nur Rahmen' zu erzwingen */
+#dropup-language.btn.dropdown-toggle {
   background-color: transparent !important;
   color: #000 !important;
   border: 3px solid #000 !important;
 }
+.btn-default:hover,
 .btn-filter-reset:hover,
 .btn-filter-empty:hover,
 #dropup-language.btn:hover,
-#dropup-language.btn:focus,
-.navbar .btn-default:hover {
+#dropup-language.btn:focus {
   background-color: #000 !important;
   color: #fff !important;
 }
