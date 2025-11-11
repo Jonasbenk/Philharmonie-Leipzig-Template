@@ -59,6 +59,32 @@ header.navbar,
 }
 
 /* -----------------------------
+   LOGO & HEADER-HÖHE
+--------------------------------*/
+.navbar-brand {
+  margin: 0 !important;           /* entfernt linken/rechten Abstand */
+  padding: 0 !important;
+  height: auto !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Bild im Logo: füllt gesamte verfügbare Höhe */
+.navbar-brand img {
+  width: auto !important;
+  height: 70px !important;        /* Logo sichtbar größer */
+  max-height: 100% !important;
+  object-fit: contain;
+}
+
+/* Navbar insgesamt etwas höher, damit Logo Platz hat */
+.navbar {
+  min-height: 90px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* -----------------------------
    TYPOGRAFIE
 --------------------------------*/
 h1, .page-header.text-center h1 {
@@ -127,13 +153,16 @@ small {
 }
 
 /* -----------------------------
-   BUTTONS – Ausnahmen / Filterleiste
+   BUTTONS – Ausnahmen / Filter + Sprache
 --------------------------------*/
-/* Buttons wie "Keine Filter gesetzt" oder "Filter löschen"
-   sollen NUR Rahmen haben, kein schwarzes Fill */
+/* Buttons wie "Keine Filter gesetzt", "Filter löschen" und Sprachumschalter
+   nur Rahmen, kein schwarzes Fill */
 .btn-default,
 .btn-filter-reset,
-.btn-filter-empty {
+.btn-filter-empty,
+.btn-language,
+.language-switch,
+.language-btn {
   background-color: transparent !important;
   color: #000 !important;
   border-color: #000 !important;
@@ -142,7 +171,10 @@ small {
 /* Hover-Effekt für diese hellen Buttons */
 .btn-default:hover,
 .btn-filter-reset:hover,
-.btn-filter-empty:hover {
+.btn-filter-empty:hover,
+.btn-language:hover,
+.language-switch:hover,
+.language-btn:hover {
   background-color: #000 !important;
   color: #fff !important;
 }
