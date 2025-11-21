@@ -222,6 +222,95 @@ header.navbar,
 }
 
 /* -----------------------------
+   FORM-CONTROLS (Inputs)
+--------------------------------*/
+.form-control {
+  border: 2px solid #000 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+/* ============================================================
+   PERFECT ROUND COUNTER – Philharmonie Style
+   ============================================================ */
+
+/* Container gleich hoch halten */
+.evt-price-calculator .input-group {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Zentrales Input-Feld (Zähler) */
+.evt-price-calculator .form-control {
+  height: 52px !important;
+  padding: 0 !important;
+  text-align: center !important;
+  border-top: 3px solid #000 !important;
+  border-bottom: 3px solid #000 !important;
+  border-left: none !important;
+  border-right: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  font-family: "adobe-garamond-pro", serif !important;
+  font-size: 20px !important;
+  flex: 1 1 auto !important;
+}
+
+/* Plus/Minus Buttons optisch wie restliche Buttons, aber kompakt */
+.evt-price-calculator .input-group-addon .btn-minus,
+.evt-price-calculator .input-group-addon .btn-plus {
+  height: 52px !important;
+  width: 52px !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: 3px solid #000 !important;
+  background: transparent !important;
+  font-size: 26px !important;
+  border-radius: 50% !important;
+  line-height: 1 !important;
+}
+
+/* LINKS: Minus – runde linke Seite, Kante zum Input */
+.evt-price-calculator .input-group-addon:first-child .btn-minus {
+  border-right: none !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 300px !important;
+  border-bottom-left-radius: 300px !important;
+}
+
+/* RECHTS: Plus – runde rechte Seite, Kante zum Input */
+.evt-price-calculator .input-group-addon:last-child .btn-plus {
+  border-left: none !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 300px !important;
+  border-bottom-right-radius: 300px !important;
+}
+
+/* HOVER-Effekt Plus/Minus */
+.evt-price-calculator .btn-plus:hover,
+.evt-price-calculator .btn-minus:hover {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+}
+
+/* Addon-Container: nur für Buttons, ohne eigene Border */
+.evt-price-calculator .input-group-addon {
+  padding: 0 !important;
+  width: 52px !important;
+  background: transparent !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+}
+
+/* -----------------------------
    WELL & WELL-LIGHT
 --------------------------------*/
 .well {
