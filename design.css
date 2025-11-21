@@ -59,12 +59,8 @@ h2 {
   line-height: 1.3;
 }
 
-/* Nur Event-Titel-H2 = 30px */
-h2.event-title,
-.page-eventlist h2,
-.event h2,
-.event-item h2,
-.event__title h2 {
+/* Nur Event-Titel-H2 (mit IDs wie event-title-34) = 30px */
+h2[id^="event-title-"] {
   font-size: 30px !important;
 }
 
