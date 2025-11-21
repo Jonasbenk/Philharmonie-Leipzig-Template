@@ -1,5 +1,5 @@
 /* ============================================================
-   Philharmonie Leipzig – Custom Design (Gesamtstand, Icons gefixt)
+   Philharmonie Leipzig – Custom Design (Gesamtstand, Fonts & Icons gefixt)
    ============================================================ */
 
 /* -----------------------------
@@ -7,17 +7,17 @@
 --------------------------------*/
 @import url("https://use.typekit.net/ddg0djh.css");
 
-/* Body + Standardtexte = Adobe Garamond Pro, 20px */
+/* Body = Adobe Garamond Pro, 20px */
 body {
-  font-family: "adobe-garamond-pro", "Times New Roman", serif;
-  font-size: 20px;
+  font-family: "adobe-garamond-pro", "Times New Roman", serif !important;
+  font-size: 20px !important;
   font-weight: 400;
   line-height: 1.5;
 }
 
-/* Normale Texte erben vom Body, bekommen aber sicher 20px */
+/* Normale Texte erben vom Body, aber bekommen 20px gesichert */
+/* WICHTIG: kein span hier, um Icon-Spans NICHT zu erwischen */
 p,
-span,
 a,
 small,
 label,
@@ -30,11 +30,13 @@ label,
   font-size: 20px !important;
   font-weight: 400;
   line-height: 1.5;
-  font-family: inherit; /* erbt von body, überschreibt nichts eigenes */
+  font-family: inherit; /* erbt Adobe vom body oder eigene, falls gesetzt */
 }
 
-/* WICHTIG: Icon-Fonts NICHT anfassen (kein font-family hier!) */
-/* Keine Regeln für .glyphicon, .fa, [class^="icon-"], etc. */
+/* Icons lassen wir komplett in Ruhe:
+   KEINE font-family-Regel für .glyphicon, .fa, [class^="icon-"], etc.
+   Die bleiben bei ihrer ursprünglichen Icon-Font. */
+
 
 /* -----------------------------
    Custom Font: Tiempos Headline (Überschriften)
@@ -48,16 +50,15 @@ label,
   font-display: swap;
 }
 
-/* Überschriften: Tiempos */
 h1,
 .page-header.text-center h1 {
-  font-family: "Tiempos Headline", Georgia, serif;
+  font-family: "Tiempos Headline", Georgia, serif !important;
   font-size: 38px !important;
   line-height: 1.2;
 }
 
 h2 {
-  font-family: "Tiempos Headline", Georgia, serif;
+  font-family: "Tiempos Headline", Georgia, serif !important;
   font-size: 30px !important;
   line-height: 1.3;
 }
