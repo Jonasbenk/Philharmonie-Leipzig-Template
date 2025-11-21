@@ -231,7 +231,7 @@ header.navbar,
 }
 
 /* ============================================================
-   PERFECT ROUND COUNTER – Philharmonie Style
+   PERFECT ROUND COUNTER – Philharmonie Style (Updated)
    ============================================================ */
 
 /* Container gleich hoch halten */
@@ -242,7 +242,7 @@ header.navbar,
 
 /* Zentrales Input-Feld (Zähler) */
 .evt-price-calculator .form-control {
-  height: 52px !important;
+  height: 48px !important;
   padding: 0 !important;
   text-align: center !important;
   border-top: 3px solid #000 !important;
@@ -256,23 +256,24 @@ header.navbar,
   flex: 1 1 auto !important;
 }
 
-/* Plus/Minus Buttons optisch wie restliche Buttons, aber kompakt */
+/* Plus/Minus Buttons – etwas kleiner & konsistent */
 .evt-price-calculator .input-group-addon .btn-minus,
 .evt-price-calculator .input-group-addon .btn-plus {
-  height: 52px !important;
-  width: 52px !important;
+  height: 48px !important;
+  width: 48px !important;
   padding: 0 !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   border: 3px solid #000 !important;
   background: transparent !important;
-  font-size: 26px !important;
+  font-size: 20px !important;
   border-radius: 50% !important;
   line-height: 1 !important;
+  color: #000 !important;
 }
 
-/* LINKS: Minus – runde linke Seite, Kante zum Input */
+/* LINKS: Minus – runde linke Seite */
 .evt-price-calculator .input-group-addon:first-child .btn-minus {
   border-right: none !important;
   border-top-right-radius: 0 !important;
@@ -281,7 +282,7 @@ header.navbar,
   border-bottom-left-radius: 300px !important;
 }
 
-/* RECHTS: Plus – runde rechte Seite, Kante zum Input */
+/* RECHTS: Plus – runde rechte Seite */
 .evt-price-calculator .input-group-addon:last-child .btn-plus {
   border-left: none !important;
   border-top-left-radius: 0 !important;
@@ -290,7 +291,7 @@ header.navbar,
   border-bottom-right-radius: 300px !important;
 }
 
-/* HOVER-Effekt Plus/Minus */
+/* Hover */
 .evt-price-calculator .btn-plus:hover,
 .evt-price-calculator .btn-minus:hover {
   background: #000 !important;
@@ -298,10 +299,24 @@ header.navbar,
   border-color: #000 !important;
 }
 
-/* Addon-Container: nur für Buttons, ohne eigene Border */
+/* ACTIVE/FOCUS: Rahmen NIE verschwinden */
+.evt-price-calculator .btn-plus:focus,
+.evt-price-calculator .btn-minus:focus,
+.evt-price-calculator .btn-plus:active,
+.evt-price-calculator .btn-minus:active,
+.evt-price-calculator .btn-plus:active:focus,
+.evt-price-calculator .btn-minus:active:focus {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Addon-Container */
 .evt-price-calculator .input-group-addon {
   padding: 0 !important;
-  width: 52px !important;
+  width: 48px !important;
   background: transparent !important;
   border: none !important;
   display: flex !important;
