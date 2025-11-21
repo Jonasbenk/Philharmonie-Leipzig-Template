@@ -1,5 +1,5 @@
 /* ============================================================
-   Philharmonie Leipzig – Custom Design (Gesamtstand)
+   Philharmonie Leipzig – Custom Design (Gesamtstand, Icons gefixt)
    ============================================================ */
 
 /* -----------------------------
@@ -7,8 +7,15 @@
 --------------------------------*/
 @import url("https://use.typekit.net/ddg0djh.css");
 
-/* Body + Standardtexte = Adobe Garamond Pro */
-body,
+/* Body + Standardtexte = Adobe Garamond Pro, 20px */
+body {
+  font-family: "adobe-garamond-pro", "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Normale Texte erben vom Body, bekommen aber sicher 20px */
 p,
 span,
 a,
@@ -16,30 +23,18 @@ small,
 label,
 .navbar-nav > li > a,
 .well,
-.well-light {
-  font-family: "adobe-garamond-pro", "Times New Roman", serif !important;
-  font-size: 16px !important;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-/* Buttons ebenfalls Adobe + 16px */
+.well-light,
 .btn,
 .btn-default,
 .btn-primary {
-  font-family: "adobe-garamond-pro", "Times New Roman", serif !important;
-  font-size: 16px !important;
+  font-size: 20px !important;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: inherit; /* erbt von body, überschreibt nichts eigenes */
 }
 
-/* Schutz: Icon-Fonts NICHT überschreiben */
-[class^="icon-"],
-[class*=" icon-"],
-.glyphicon,
-.fa,
-.material-icons {
-  font-family: inherit !important;
-  font-weight: normal !important;
-}
+/* WICHTIG: Icon-Fonts NICHT anfassen (kein font-family hier!) */
+/* Keine Regeln für .glyphicon, .fa, [class^="icon-"], etc. */
 
 /* -----------------------------
    Custom Font: Tiempos Headline (Überschriften)
@@ -53,14 +48,16 @@ label,
   font-display: swap;
 }
 
-h1, .page-header.text-center h1 {
-  font-family: "Tiempos Headline", Georgia, serif !important;
+/* Überschriften: Tiempos */
+h1,
+.page-header.text-center h1 {
+  font-family: "Tiempos Headline", Georgia, serif;
   font-size: 38px !important;
   line-height: 1.2;
 }
 
 h2 {
-  font-family: "Tiempos Headline", Georgia, serif !important;
+  font-family: "Tiempos Headline", Georgia, serif;
   font-size: 30px !important;
   line-height: 1.3;
 }
@@ -154,6 +151,23 @@ header.navbar,
 }
 
 /* -----------------------------
+   Menülinks
+--------------------------------*/
+.navbar-nav > li > a {
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: none !important;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li.active > a {
+  color: #000;
+  background: none !important;
+}
+
+/* -----------------------------
    BUTTONS – Grundstil (schwarz)
 --------------------------------*/
 .btn,
@@ -202,11 +216,16 @@ header.navbar,
   color: #fff !important;
 }
 
-/* Fix: Language Button Hover unbedingt weiße Schrift */
-#dropup-language.btn:hover,
-#dropup-language.btn:focus,
+/* EXTRA: Language Button – Text IMMER weiß bei Hover */
+#dropup-language:hover,
+#dropup-language:focus,
 #dropup-language.btn.dropdown-toggle:hover,
 #dropup-language.btn.dropdown-toggle:focus {
+  color: #fff !important;
+}
+
+#dropup-language:hover *,
+#dropup-language:focus * {
   color: #fff !important;
   fill: #fff !important;
   stroke: #fff !important;
@@ -215,8 +234,13 @@ header.navbar,
 /* -----------------------------
    WELL & WELL-LIGHT
 --------------------------------*/
-.well { padding: 0 !important; }
-.well-light { border: 0 !important; }
+.well {
+  padding: 0 !important;
+}
+
+.well-light {
+  border: 0 !important;
+}
 
 /* -----------------------------
    SPACING unterhalb Header
@@ -237,7 +261,9 @@ header.navbar.navbar-fixed-top + .container.webshop {
 }
 
 @media (max-width: 767px) {
-  body { padding-top: 110px !important; }
+  body {
+    padding-top: 110px !important;
+  }
   header.navbar.navbar-fixed-top + .container,
   header.navbar.navbar-fixed-top + .container.webshop {
     margin-top: 110px !important;
