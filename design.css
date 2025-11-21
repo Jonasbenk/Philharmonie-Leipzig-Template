@@ -222,7 +222,7 @@ header.navbar,
 }
 
 /* -----------------------------
-   FORM-CONTROLS (Inputs)
+   FORM-CONTROLS (deine Änderung)
 --------------------------------*/
 .form-control {
   border: 2px solid #000 !important;
@@ -230,99 +230,36 @@ header.navbar,
   border-right: 0 !important;
 }
 
-/* ============================================================
-   PERFECT ROUND COUNTER – Philharmonie Style (Updated)
-   ============================================================ */
+/* -----------------------------
+   Price Calculator / Plus-Minus-Buttons
+--------------------------------*/
 
-/* Container gleich hoch halten */
-.evt-price-calculator .input-group {
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* Zentrales Input-Feld (Zähler) */
-.evt-price-calculator .form-control {
-  height: 48px !important;
-  padding: 0 !important;
-  text-align: center !important;
-  border-top: 3px solid #000 !important;
-  border-bottom: 3px solid #000 !important;
-  border-left: none !important;
-  border-right: none !important;
-  background: transparent !important;
-  border-radius: 0 !important;
-  font-family: "adobe-garamond-pro", serif !important;
-  font-size: 20px !important;
-  flex: 1 1 auto !important;
-}
-
-/* Plus/Minus Buttons – etwas kleiner & konsistent */
-.evt-price-calculator .input-group-addon .btn-minus,
-.evt-price-calculator .input-group-addon .btn-plus {
-  height: 48px !important;
-  width: 48px !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  border: 3px solid #000 !important;
-  background: transparent !important;
-  font-size: 20px !important;
-  border-radius: 50% !important;
-  line-height: 1 !important;
-  color: #000 !important;
-}
-
-/* LINKS: Minus – runde linke Seite */
-.evt-price-calculator .input-group-addon:first-child .btn-minus {
-  border-right: none !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-  border-top-left-radius: 300px !important;
-  border-bottom-left-radius: 300px !important;
-}
-
-/* RECHTS: Plus – runde rechte Seite */
-.evt-price-calculator .input-group-addon:last-child .btn-plus {
-  border-left: none !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-  border-top-right-radius: 300px !important;
-  border-bottom-right-radius: 300px !important;
-}
-
-/* Hover */
-.evt-price-calculator .btn-plus:hover,
-.evt-price-calculator .btn-minus:hover {
-  background: #000 !important;
-  color: #fff !important;
-  border-color: #000 !important;
-}
-
-/* ACTIVE/FOCUS: Rahmen NIE verschwinden */
-.evt-price-calculator .btn-plus:focus,
-.evt-price-calculator .btn-minus:focus,
-.evt-price-calculator .btn-plus:active,
-.evt-price-calculator .btn-minus:active,
-.evt-price-calculator .btn-plus:active:focus,
-.evt-price-calculator .btn-minus:active:focus {
-  background: #000 !important;
-  color: #fff !important;
-  border-color: #000 !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Addon-Container */
+/* Grundlayout für Addons im Price-Calculator */
 .evt-price-calculator .input-group-addon {
   padding: 0 !important;
-  width: 48px !important;
-  background: transparent !important;
-  border: none !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex: 0 0 auto !important;
+  width: 30% !important;
+}
+
+/* Kein Doppelborder zwischen Minus-Button und Feld */
+.evt-price-calculator .input-group-addon:first-child {
+  border-right: 0 !important;
+}
+
+/* Kein Doppelborder zwischen Feld und Plus-Button */
+.evt-price-calculator .input-group-addon:last-child {
+  border-left: 0 !important;
+}
+
+/* Plus/Minus Buttons optisch wie restliche Buttons */
+.evt-price-calculator .input-group-addon .btn-minus,
+.evt-price-calculator .input-group-addon .btn-plus {
+  padding: 6px 12px !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  border-width: 3px !important;
+  border-radius: 300px !important;
+  height: auto !important;
+  width: auto !important;
 }
 
 /* -----------------------------
