@@ -222,47 +222,6 @@ header.navbar,
 }
 
 /* -----------------------------
-   FORM-CONTROLS (deine Änderung)
---------------------------------*/
-.form-control {
-  border: 2px solid #000 !important;
-  border-left: 0 !important;
-  border-right: 0 !important;
-}
-
-/* -----------------------------
-   Price Calculator / Plus-Minus-Buttons
---------------------------------*/
-
-/* Grundlayout für Addons im Price-Calculator */
-.evt-price-calculator .input-group-addon {
-  padding: 0 !important;
-  width: 30% !important;
-}
-
-/* Kein Doppelborder zwischen Minus-Button und Feld */
-.evt-price-calculator .input-group-addon:first-child {
-  border-right: 0 !important;
-}
-
-/* Kein Doppelborder zwischen Feld und Plus-Button */
-.evt-price-calculator .input-group-addon:last-child {
-  border-left: 0 !important;
-}
-
-/* Plus/Minus Buttons optisch wie restliche Buttons */
-.evt-price-calculator .input-group-addon .btn-minus,
-.evt-price-calculator .input-group-addon .btn-plus {
-  padding: 6px 12px !important;
-  font-size: 20px !important;
-  line-height: 1 !important;
-  border-width: 3px !important;
-  border-radius: 300px !important;
-  height: auto !important;
-  width: auto !important;
-}
-
-/* -----------------------------
    WELL & WELL-LIGHT
 --------------------------------*/
 .well {
