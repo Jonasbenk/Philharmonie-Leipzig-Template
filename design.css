@@ -259,3 +259,18 @@ header.navbar.navbar-fixed-top + .container.webshop {
     margin-top: 110px !important;
   }
 }
+
+/* ============================================================
+   PRICE CALCULATOR – nur Padding-Anpassung
+   ============================================================ */
+
+/* Minus/Plus-Buttons etwas kompakter machen */
+.evt-price-calculator .input-group-addon .btn-minus,
+.evt-price-calculator .input-group-addon .btn-plus {
+  padding: 6px 12px !important; /* statt der sehr großen 14px 16px */
+}
+
+/* Optional: generelles Padding am Addon reduzieren */
+.evt-price-calculator .input-group-addon {
+  padding: 0 !important;
+}
