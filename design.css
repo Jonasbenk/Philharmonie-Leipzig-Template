@@ -59,7 +59,7 @@ h2 {
   line-height: 1.3;
 }
 
-/* Nur Event-Titel-H2 (mit IDs wie event-title-34) = 30px */
+/* Nur Event-Titel-H2 (mit IDs wie event-title-XX) = 30px */
 h2[id^="event-title-"] {
   font-size: 30px !important;
 }
@@ -82,13 +82,6 @@ header.navbar,
   outline: none !important;
 }
 
-header.navbar,
-.navbar,
-.navbar-default,
-.navbar-inner {
-  border-bottom: none !important;
-}
-
 .navbar::before,
 .navbar::after,
 .navbar-default::before,
@@ -96,8 +89,6 @@ header.navbar,
 .navbar-inner::before,
 .navbar-inner::after {
   display: none !important;
-  border: none !important;
-  box-shadow: none !important;
 }
 
 /* Links ohne Linien */
@@ -124,6 +115,7 @@ header.navbar,
   display: block !important;
   height: 90px !important;
   line-height: 90px !important;
+
   background-repeat: no-repeat !important;
   background-position: left center !important;
   background-size: auto 80% !important;
@@ -148,7 +140,7 @@ header.navbar,
 
 .navbar-nav > li > a:hover,
 .navbar-nav > li.active > a {
-  color: #000;
+  color: #000 !important;
   background: none !important;
 }
 
@@ -178,7 +170,6 @@ header.navbar,
   background-color: #fff !important;
   color: #000 !important;
   border-color: #000 !important;
-  text-decoration: none !important;
 }
 
 /* -----------------------------
@@ -235,15 +226,13 @@ header.navbar,
 /* -----------------------------
    SPACING unterhalb Header – REDUZIERT
 --------------------------------*/
-
-/* Verringerter Abstand zwischen Menü und H1 */
 body {
-  padding-top: 80px !important;   /* vorher 140px */
+  padding-top: 80px !important;
 }
 
 header.navbar.navbar-fixed-top + .container,
 header.navbar.navbar-fixed-top + .container.webshop {
-  margin-top: 80px !important;    /* vorher 140px */
+  margin-top: 80px !important;
 }
 
 .page-header {
@@ -260,4 +249,13 @@ header.navbar.navbar-fixed-top + .container.webshop {
   header.navbar.navbar-fixed-top + .container.webshop {
     margin-top: 110px !important;
   }
+}
+
+/* ============================================================
+   PRICE CALCULATOR FIX – Entfernt falsches Padding
+   ============================================================ */
+.evt-price-calculator .input-group-addon .btn-minus,
+.evt-price-calculator .input-group-addon .btn-plus {
+  padding: 0 !important;
+  display: block !important;
 }
