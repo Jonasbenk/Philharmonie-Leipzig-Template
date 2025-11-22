@@ -259,3 +259,14 @@ header.navbar.navbar-fixed-top + .container.webshop {
   padding: 0 !important;
   display: block !important;
 }
+
+/* ============================================================
+   PREISDROPDOWN FIX – "doppelter" Button (Normalpreis 79,00 €)
+   ============================================================ */
+.btn.btn-default.dropdown-toggle {
+  background-color: transparent !important;
+  border: 3px solid #000 !important;
+  border-radius: 300px !important;
+  box-shadow: none !important;
+  padding: 10px 24px !important;
+}
