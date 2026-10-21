@@ -270,3 +270,36 @@ header.navbar.navbar-fixed-top + .container.webshop {
   box-shadow: none !important;
   padding: 10px 24px !important;
 }
+
+/* ============================================================
+   ANMELDUNG – Registrierung fördern (Wunsch Konrad, 10/2026)
+   "Neu registrieren" schwarz wie "Anmelden",
+   "Weiter als Gast" als Textlink wie "Passwort vergessen?"
+   ============================================================ */
+a.btn.btn-default[href*="customerneweditdetails"] {
+  background-color: #000 !important;
+  border-color: #000 !important;
+  color: #fff !important;
+}
+
+a.btn.btn-default[href*="customerneweditdetails"]:hover,
+a.btn.btn-default[href*="customerneweditdetails"]:focus {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+/* Gast-Button: Selektor nach Prüfung im Checkout ggf. anpassen */
+.evt-guest-checkout,
+a.btn[href*="guest" i],
+a.btn[href*="gast" i],
+button.btn[value*="guest" i],
+button.btn[value*="gast" i] {
+  background: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  color: #000 !important;
+  text-decoration: underline !important;
+  box-shadow: none !important;
+}
