@@ -275,31 +275,32 @@ header.navbar.navbar-fixed-top + .container.webshop {
    ANMELDUNG – Registrierung fördern (Wunsch Konrad, 10/2026)
    "Neu registrieren" schwarz wie "Anmelden",
    "Weiter als Gast" als Textlink wie "Passwort vergessen?"
+   (beide verlinken auf customerneweditdetails, Gast mit ?guest=true)
    ============================================================ */
-a.btn.btn-default[href*="customerneweditdetails"] {
+a.btn.btn-default[href*="customerneweditdetails"]:not([href*="guest=true"]) {
   background-color: #000 !important;
   border-color: #000 !important;
   color: #fff !important;
 }
 
-a.btn.btn-default[href*="customerneweditdetails"]:hover,
-a.btn.btn-default[href*="customerneweditdetails"]:focus {
+a.btn.btn-default[href*="customerneweditdetails"]:not([href*="guest=true"]):hover,
+a.btn.btn-default[href*="customerneweditdetails"]:not([href*="guest=true"]):focus {
   background-color: #fff !important;
   color: #000 !important;
 }
 
-/* Gast-Button: Selektor nach Prüfung im Checkout ggf. anpassen */
-.evt-guest-checkout,
-a.btn[href*="guest" i],
-a.btn[href*="gast" i],
-button.btn[value*="guest" i],
-button.btn[value*="gast" i] {
+a.btn.btn-default[href*="guest=true"],
+a.btn.btn-default[href*="guest=true"]:hover,
+a.btn.btn-default[href*="guest=true"]:focus,
+a.btn.btn-default[href*="guest=true"]:active {
+  display: inline !important;
+  width: auto !important;
   background: none !important;
   border: 0 !important;
   border-radius: 0 !important;
   padding: 0 !important;
-  width: auto !important;
+  box-shadow: none !important;
   color: #000 !important;
   text-decoration: underline !important;
-  box-shadow: none !important;
+  text-align: left !important;
 }
